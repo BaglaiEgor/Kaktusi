@@ -1,0 +1,34 @@
+﻿<Page x:Class="WpfApp2.Pages.Page4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page4">
+
+    <Grid>
+        <Image Source="/Image9.png" Stretch="Fill" Height="450" VerticalAlignment="Center" HorizontalAlignment="Right" Width="800"/>
+        <ListView Grid.Row="1" Name="ListKV" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Opacity="0.6">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id_kaktus_vistavka}" Width="30">id</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id_kaktus}" Width="275">id кактуса</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id_vistavka}" Width="220">id выставки</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=kolichestvo}" Width="275">Количество кактусов</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ComboBox x:Name="EditCB" HorizontalAlignment="Left" Margin="29,320,0,0" VerticalAlignment="Top" Height="23" Width="120">
+            <ComboBoxItem Content="Кактус"/>
+            <ComboBoxItem Content="Выставка"/>
+            <ComboBoxItem Content="Количество кактусов"/>
+        </ComboBox>
+        <Button Content="НАЗАД" HorizontalAlignment="Left" Margin="645,350,0,0" VerticalAlignment="Top" Height="23" Width="120" Click="Button_Click"/>
+        <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="495,350,0,0" VerticalAlignment="Top" Height="23" Width="120" Click="Button_Click_1"/>
+        <Button Content="УДАЛИТЬ" HorizontalAlignment="Left" Margin="345,350,0,0" VerticalAlignment="Top" Height="23" Width="120" Click="Button_Click_2"/>
+        <Button Content="ИЗМЕНИТЬ" HorizontalAlignment="Left" Margin="89,350,0,0" VerticalAlignment="Top" Height="24" Width="120" Click="EditCactusBtn_Click"/>
+        <TextBox x:Name="Changetxt" HorizontalAlignment="Left" Margin="154,319,0,0" VerticalAlignment="Top" Height="24" Width="120"/>
+    </Grid>
+</Page>
